@@ -1,7 +1,3 @@
-
-
-
-
 # 🛠️ GoMalLoader: Modular Malware Loader in Go
 
 # ⚠️ WARNING
@@ -12,21 +8,19 @@
 - Never use this tool on systems you do not own or have explicit permission to test.
 - Use for educational, research, or red team purposes only, and always follow all applicable laws and ethical guidelines.
 
----
 
----
 
 ## Overview
 
 **GoMalLoader** is a modular, cross-platform, and production-grade malware loader written in Go. It supports advanced payload delivery and evasion techniques, with a focus on modularity, extensibility, and cross-platform support (Windows, Linux, Mac).
 
----
+
 
 ## About This Project
 
 This is a personal project created to better understand how advanced malware loaders work, including their architecture, evasion techniques, and cross-platform payload delivery. The codebase is intended for educational and research purposes, to study and experiment with loader design, not for malicious use.
 
----
+
 
 ## In-Depth Documentation
 
@@ -63,7 +57,7 @@ This is a personal project created to better understand how advanced malware loa
   - AES-CBC encryption for all payloads.
   - Optional obfuscation (can be extended, e.g., AES + base64).
 
----
+
 
 ### When & How to Use Each Feature
 
@@ -83,7 +77,7 @@ This is a personal project created to better understand how advanced malware loa
   - Suitable for fileless persistence, in-memory plugins, or advanced red team operations.
   - On Mac, see the note below about in-memory Mach-O loading limitations.
 
----
+
 
 ### Step-by-Step Usage Instructions
 
@@ -142,7 +136,7 @@ sudo ./loader_linux
 - Use in a controlled, isolated environment.
 - Execution may trigger antivirus or EDR systems.
 
----
+
 
 ### Platform-Specific Notes
 
@@ -162,7 +156,7 @@ sudo ./loader_linux
 > **Future Work:**
 > - If pure in-memory Mach-O loading is required, a custom loader must be implemented in Go or C, which parses Mach-O headers, maps segments, resolves symbols, and jumps to the entry point. This is not currently implemented in GoMalLoader.
 
----
+
 
 ## Features
 
@@ -176,7 +170,7 @@ sudo ./loader_linux
 | EDR evasion                      | Includes mutex locking, sleep skew detection, sandbox name checks |
 | Optional self-delete             | Removes executable after execution (platform-specific)       |
 
----
+
 
 ## Architecture
 
@@ -188,7 +182,7 @@ sudo ./loader_linux
   - **Reflective Loader**: Loads a shared library (DLL/SO/dylib) in memory (see below for platform details).
 - **Utilities**: AES decryption, evasion, memory allocation, and process/thread manipulation are all abstracted and implemented per platform.
 
----
+
 
 ## Cross-Platform Reflective Loader Strategies
 
@@ -208,7 +202,7 @@ sudo ./loader_linux
 > **Future Work:**
 > - If pure in-memory Mach-O loading is required, a custom loader must be implemented in Go or C, which parses Mach-O headers, maps segments, resolves symbols, and jumps to the entry point. This is a significant engineering effort and is not currently implemented in GoMalLoader.
 
----
+
 
 ## Usage
 
@@ -253,7 +247,7 @@ Example:
 }
 ```
 
----
+
 
 ## Modes
 
@@ -261,13 +255,13 @@ Example:
 - `inject_remote` – Injects shellcode into a running target process.
 - `dll_reflective` – Reflectively loads and executes a DLL/SO/dylib using platform-specific techniques.
 
----
+
 
 ## Self-delete
 
 If `"self_delete": true`, the loader deletes itself from disk using a platform-specific method (e.g., `cmd.exe` on Windows, shell script on Linux/Mac).
 
----
+
 
 ## Notes
 
@@ -279,7 +273,7 @@ If `"self_delete": true`, the loader deletes itself from disk using a platform-s
 - **Pure in-memory Mach-O loading is not implemented; see above for details and future work.**
 
 
----
+
 
 ## Legal
 
