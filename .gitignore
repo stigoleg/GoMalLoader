@@ -1,0 +1,36 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Go build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+GoMalLoader
+loader_*
+
+# Python artifacts
+*.pyc
+__pycache__/
+
+# Logs and debug
+*.log
+debug.log
+
+# Editor/project files
+.vscode/
+.idea/
+.cursor/
+
+# Payloads and binaries
+payloads/*.bin
+
+# Test outputs
+*.coverprofile
+
+# Misc
+*.swp
+*~ 
