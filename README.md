@@ -12,7 +12,7 @@
 
 ## Overview
 
-**GoMalLoader** is a modular, cross-platform, and production-grade malware loader written in Go. It supports advanced payload delivery and evasion techniques, with a focus on modularity, extensibility, and cross-platform support (Windows, Linux, Mac).
+**GoMalLoader** is a modular, cross-platform malware loader written in Go. It supports advanced payload delivery and evasion techniques, with a focus on modularity, extensibility, and cross-platform support (Windows, Linux, Mac).
 
 
 
